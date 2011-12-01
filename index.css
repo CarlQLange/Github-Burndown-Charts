@@ -1,0 +1,60 @@
+body {
+	background-color: #EEE;
+	color: #111;
+	font-family: Helvetica, sans-serif;
+	max-width:500px;
+	margin:auto;
+}
+
+h1 {
+	text-align: center;
+	font-size: 2.2em;
+}
+
+#tagline {
+	font-size: 1.4em;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+#summary {
+	background-color: #DDD;
+	border-radius: 15px;
+
+	margin:auto;
+	margin-bottom:10px;
+	padding:5px;
+
+	width: 500px;
+}
+
+#inputrepo {
+	margin:auto;
+	text-align: center;
+}
+
+#repo {
+	width: 400px;
+}
+
+#submitbutton {
+	width: 80px;
+}
+
+#chart {
+	margin-top:15px;
+	margin-bottom:15px;
+	margin-left:auto;
+	margin-right:auto;
+	width:500px;
+	height:500px;
+
+	background-color: #AAF;
+}
+
+footer {
+
+	text-align: center;
+	margin:auto;
+	width:500px;
+}

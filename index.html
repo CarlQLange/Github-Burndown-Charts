@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Github Burndown Charts</title>
+
+		<link rel='stylesheet' href='index.css'></link>
+
+		<script src='burndown.js'></script>
+	</head>
+	
+	<body>
+		<h1>Github Burndown Charts</h1>
+		<div id='tagline'>
+			<span>
+				A burndown chart for your github repository. Bam.
+			</span>
+		</div>
+
+		<div id='summary'>
+			<p>
+				Using Scrum? Don't want to look at a spreadsheet all day to sort out
+				your burndown chart? I've got you covered.
+				What you need:
+					<ul>
+						<li>A public github repo for your project.</li>
+						<li>Issues set up and in use, using milestones, on that github.</li>
+					</ul>
+				Paste the URL to your repo below, select the date you started working
+				and the date your next milestone is to be hit. (CARL! Get this from
+				the API, you idiot)
+				That's pretty much it, I think. Yay MVP!
+			</p>
+		</div>
+
+		<!-- input box for repo -->
+		<div id='inputrepo'>
+			<input id='repo' type='text' name='repo' placeholder='The URL of your repo'/>
+			<!--<input id='date' type='startdate' name='startdate'/>
+			<input id='date' type='date' name='deadline'/>-->
+			<input id='submitbutton' type='submit' name='submit'/>
+		</div>
+
+		<div id='chart'>
+		</div>
+
+		<footer>
+			<span>
+				<a href='http://carllange.me'>Carl Lange</a> made this.
+				Check the code out on 
+				<a href='http://github.com/CarlQLange/Github-Burndown'>github.</a>
+				Talk to me on <a href='http://twitter.com/csl_'>twitter.</a>
+		</footer>
+	</body>
+</html>
