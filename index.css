@@ -25,7 +25,7 @@ h1 {
 	margin-bottom:10px;
 	padding:5px;
 
-	width: 500px;
+	width: 480px;
 }
 
 #inputrepo {
@@ -48,8 +48,6 @@ h1 {
 	margin-right:auto;
 	width:500px;
 	height:500px;
-
-	background-color: #AAF;
 }
 
 footer {

@@ -4,8 +4,11 @@
 		<title>Github Burndown Charts</title>
 
 		<link rel='stylesheet' href='index.css'></link>
-
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 		<script src='burndown.js'></script>
+		<script>
+			google.load('visualization', '1.0', {'packages':['corechart']});
+		</script>
 	</head>
 	
 	<body>
@@ -29,6 +32,8 @@
 				and the date your next milestone is to be hit. (CARL! Get this from
 				the API, you idiot)
 				That's pretty much it, I think. Yay MVP!
+
+				<h5>MORE EXPLANATION BITCH</h5>
 			</p>
 		</div>
 
@@ -37,7 +42,7 @@
 			<input id='repo' type='text' name='repo' placeholder='The URL of your repo'/>
 			<!--<input id='date' type='startdate' name='startdate'/>
 			<input id='date' type='date' name='deadline'/>-->
-			<input id='submitbutton' type='submit' name='submit'/>
+			<button id='submitbutton' onclick='run()'>&gt;</button>
 		</div>
 
 		<div id='chart'>
@@ -48,7 +53,7 @@
 				<a href='http://carllange.me'>Carl Lange</a> made this.
 				Check the code out on 
 				<a href='http://github.com/CarlQLange/Github-Burndown'>github.</a>
-				Talk to me on <a href='http://twitter.com/csl_'>twitter.</a>
+				Talk to me on <a href='http://twitter.com/csl_'>twitter,</a> or by <a href="mailto:carl+githubburndown@flax.ie">email.</a>
 		</footer>
 	</body>
 </html>
