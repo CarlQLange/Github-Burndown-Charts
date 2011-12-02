@@ -66,13 +66,17 @@ function scan(issue){
 	var needed = ( issue.body.match(/(!{2}hoursNeeded:\d+)/) )
 	var spent = ( issue.body.match(/(!{2}hoursSpent:\d+)/) )
 
-	if ((needed == null) && (spent == null)){
+	if ((needed == null) || (spent == null)){
 		return [0,0];
 	}
 
 	//now grab the numbers:
 	needed = parseInt((needed[0].match(/\d+/)[0]))
 	spent = parseInt((spent[0].match(/\d+/)[0]))
+
+	if ((needed == null) || (spent == null)){
+		return [0,0];
+	}
 
 	return [needed,spent];
 }
@@ -123,6 +127,7 @@ function viz(hoursNeeded, hoursSpent){
     	new Date("Dec 05 2011"),
     	new Date("Dec 06 2011")
     ]
+
     console.log(daysBeforeDeadline)
     data.addColumn('string', 'date')
     data.addColumn('number', 'ideal')
@@ -132,10 +137,7 @@ function viz(hoursNeeded, hoursSpent){
 
     for (day in daysBeforeDeadline){
     	data.setValue(parseInt(day), 0, daysBeforeDeadline[day].toDateString())
-
-    	data.setValue(parseInt(day), 1, (hoursNeeded+1) - daysBeforeDeadline.length-day)
-
-    	
+    	data.setValue(parseInt(day), 1, (hoursNeeded) + daysBeforeDeadline.length-day)
     }
 
     //data.setValue(0, 2, 12);
